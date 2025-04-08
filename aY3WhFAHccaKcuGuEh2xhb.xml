@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>PWD sample</h:title>
+    <model odk:xforms-version="1.0.0">
+      <instance>
+        <aY3WhFAHccaKcuGuEh2xhb id="aY3WhFAHccaKcuGuEh2xhb">
+          <start/>
+          <end/>
+          <deviceid/>
+          <phonenumber/>
+          <User_ID/>
+          <Name/>
+          <Gender/>
+          <Date_of_Birth/>
+          <Email_Address/>
+          <Phone_Number/>
+          <Local_Government/>
+          <Type_of_Disability/>
+          <House_Address/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </aY3WhFAHccaKcuGuEh2xhb>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/aY3WhFAHccaKcuGuEh2xhb/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/aY3WhFAHccaKcuGuEh2xhb/end" type="dateTime"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/aY3WhFAHccaKcuGuEh2xhb/deviceid" type="string"/>
+      <bind jr:preload="property" jr:preloadParams="phonenumber" nodeset="/aY3WhFAHccaKcuGuEh2xhb/phonenumber" type="string"/>
+      <bind nodeset="/aY3WhFAHccaKcuGuEh2xhb/User_ID" required="true()" type="string"/>
+      <bind nodeset="/aY3WhFAHccaKcuGuEh2xhb/Name" required="true()" type="string"/>
+      <bind nodeset="/aY3WhFAHccaKcuGuEh2xhb/Gender" required="true()" type="string"/>
+      <bind nodeset="/aY3WhFAHccaKcuGuEh2xhb/Date_of_Birth" required="false()" type="date"/>
+      <bind nodeset="/aY3WhFAHccaKcuGuEh2xhb/Email_Address" required="true()" type="string"/>
+      <bind jr:constraintMsg="Must be 11 digits (Nigeria format)" nodeset="/aY3WhFAHccaKcuGuEh2xhb/Phone_Number" required="true()" type="int"/>
+      <bind nodeset="/aY3WhFAHccaKcuGuEh2xhb/Local_Government" required="true()" type="string"/>
+      <bind nodeset="/aY3WhFAHccaKcuGuEh2xhb/Type_of_Disability" required="true()" type="string"/>
+      <bind nodeset="/aY3WhFAHccaKcuGuEh2xhb/House_Address" required="false()" type="string"/>
+      <bind jr:preload="uid" nodeset="/aY3WhFAHccaKcuGuEh2xhb/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/aY3WhFAHccaKcuGuEh2xhb/User_ID">
+      <label>User_ID</label>
+      <hint>Your ID</hint>
+    </input>
+    <input ref="/aY3WhFAHccaKcuGuEh2xhb/Name">
+      <label>Name</label>
+      <hint>Your name</hint>
+    </input>
+    <select1 ref="/aY3WhFAHccaKcuGuEh2xhb/Gender">
+      <label>Gender</label>
+      <hint>What is your gender</hint>
+      <item>
+        <label>Male</label>
+        <value>male</value>
+      </item>
+      <item>
+        <label>Female</label>
+        <value>female</value>
+      </item>
+    </select1>
+    <input ref="/aY3WhFAHccaKcuGuEh2xhb/Date_of_Birth">
+      <label>Date of Birth</label>
+    </input>
+    <input ref="/aY3WhFAHccaKcuGuEh2xhb/Email_Address">
+      <label>Email Address</label>
+      <hint>email address</hint>
+    </input>
+    <input ref="/aY3WhFAHccaKcuGuEh2xhb/Phone_Number">
+      <label>Phone Number</label>
+    </input>
+    <select1 ref="/aY3WhFAHccaKcuGuEh2xhb/Local_Government">
+      <label>Local Government</label>
+      <hint>Select your LGA</hint>
+      <item>
+        <label>Afijio</label>
+        <value>afijio</value>
+      </item>
+      <item>
+        <label>Akinyele</label>
+        <value>akinyele</value>
+      </item>
+      <item>
+        <label>Atiba</label>
+        <value>atiba</value>
+      </item>
+      <item>
+        <label>Atisbo</label>
+        <value>atisbo</value>
+      </item>
+      <item>
+        <label>Egbeda</label>
+        <value>egbeda</value>
+      </item>
+      <item>
+        <label>Ibadan North</label>
+        <value>ibadan_north</value>
+      </item>
+      <item>
+        <label>Ibadan North-East</label>
+        <value>ibadan_north_east</value>
+      </item>
+      <item>
+        <label>Ibadan North-West</label>
+        <value>ibadan_north_west</value>
+      </item>
+      <item>
+        <label>Ibadan South-East</label>
+        <value>ibadan_south_east</value>
+      </item>
+      <item>
+        <label>Ibadan South-West</label>
+        <value>ibadan_south_west</value>
+      </item>
+      <item>
+        <label>Ibarapa Central</label>
+        <value>ibarapa_central</value>
+      </item>
+      <item>
+        <label>Ibarapa East</label>
+        <value>ibarapa_east</value>
+      </item>
+      <item>
+        <label>Ido</label>
+        <value>ido</value>
+      </item>
+      <item>
+        <label>Irepo</label>
+        <value>irepo</value>
+      </item>
+      <item>
+        <label>Iseyin</label>
+        <value>iseyin</value>
+      </item>
+      <item>
+        <label>Itesiwaju</label>
+        <value>itesiwaju</value>
+      </item>
+      <item>
+        <label>Iwajowa</label>
+        <value>iwajowa</value>
+      </item>
+      <item>
+        <label>Kajola</label>
+        <value>kajola</value>
+      </item>
+      <item>
+        <label>Lagelu</label>
+        <value>lagelu</value>
+      </item>
+      <item>
+        <label>Ogbomosho North</label>
+        <value>ogbomosho_north</value>
+      </item>
+      <item>
+        <label>Ogbomosho South</label>
+        <value>ogbomosho_south</value>
+      </item>
+      <item>
+        <label>Ogo Oluwa</label>
+        <value>ogo_oluwa</value>
+      </item>
+      <item>
+        <label>Olorunsogo</label>
+        <value>olorunsogo</value>
+      </item>
+      <item>
+        <label>Oluyole</label>
+        <value>oluyole</value>
+      </item>
+      <item>
+        <label>Ona Ara</label>
+        <value>ona_ara</value>
+      </item>
+      <item>
+        <label>Orelope</label>
+        <value>orelope</value>
+      </item>
+      <item>
+        <label>Ori Ire</label>
+        <value>ori_ire</value>
+      </item>
+      <item>
+        <label>Oyo East</label>
+        <value>oyo_east</value>
+      </item>
+      <item>
+        <label>Oyo West</label>
+        <value>oyo_west</value>
+      </item>
+      <item>
+        <label>Saki East</label>
+        <value>saki_east</value>
+      </item>
+      <item>
+        <label>Saki West</label>
+        <value>saki_west</value>
+      </item>
+      <item>
+        <label>Surulere</label>
+        <value>surulere</value>
+      </item>
+    </select1>
+    <select ref="/aY3WhFAHccaKcuGuEh2xhb/Type_of_Disability">
+      <label>Type of Disability</label>
+      <item>
+        <label> Hearing impairment</label>
+        <value>hearing_impairment</value>
+      </item>
+      <item>
+        <label>Visual impairment </label>
+        <value>visual_impairment</value>
+      </item>
+      <item>
+        <label>Albinos</label>
+        <value>albinos</value>
+      </item>
+      <item>
+        <label>Dwarfism</label>
+        <value>dwarfism</value>
+      </item>
+      <item>
+        <label>Physical (mobility - related impairment)</label>
+        <value>physical__mobility___related_impairment</value>
+      </item>
+    </select>
+    <input ref="/aY3WhFAHccaKcuGuEh2xhb/House_Address">
+      <label>House Address</label>
+      <hint>your residential address</hint>
+    </input>
+  </h:body>
+</h:html>
